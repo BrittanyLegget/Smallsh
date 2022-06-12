@@ -18,27 +18,27 @@ command [arg1 arg2 ...] [< input_file] [> output_file] [&]
 
 A command is made up of words separated by spaces. The special symbols <, > and & are recognized, but they must be surrounded by spaces like other words.
 
-## Background Execution
+### Background Execution
 
 If the command is to be executed in the background, the last word must be &. If the & character appears anywhere else, just treat it as normal text.
 
-## Redirection
+### Redirection
 
 If standard input or output is to be redirected, the > or < words followed by a filename word must appear after all the arguments. Input redirection can appear before or after output redirection.
 
-## Limits
+### Limits
 
 Shell supports command lines with a maximum length of 2048 characters, and a maximum of 512 arguments.
 
-## Comments
+### Comments
 
 Any line that begins with the # character is a comment line and should be ignored. Mid-line comments, such as the C-style //, will not be supported.
 
-## Blank Lines
+### Blank Lines
 
 A blank line (one without any commands) does nothing and will just re-prompt for another command.
 
-## Expansion of Variable $$
+### Expansion of Variable $$
 
 The shell expands any instance of "$$" in a command into the process ID of the smallsh itself.
 
@@ -48,11 +48,11 @@ The shell supports three built-in commands: exit, cd, and status. All others are
 
 An attempt to run one of these built-in commands in the background with the & option will ignore that option and run the command in the foreground anyway.
 
-## exit
+### exit
 
 The exit command exits your shell and kill any other processes or jobs that the shell has started before it terminates itself.
 
-## cd
+### cd
 
 The cd command changes the working directory of the shell.
 
@@ -60,7 +60,7 @@ By itself - with no arguments - it changes to the directory specified in the HOM
 
 This command can also take one argument: the path of a directory to change to. The shell supports both absolute and relative paths.
 
-## status
+### status
 
 The status command prints out either the exit status or the terminating signal of the last foreground process ran by the shell.
 
