@@ -42,7 +42,7 @@ A blank line (one without any commands) does nothing and will just re-prompt for
 
 The shell expands any instance of "$$" in a command into the process ID of the smallsh itself.
 
-### Built-in Commands
+## Built-in Commands
 
 The shell supports three built-in commands: exit, cd, and status. All others are simply passed on to a member of the exec() family of functions.
 
